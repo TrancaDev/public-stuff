@@ -1,0 +1,29 @@
+[user]
+	name = Name Last
+	email = namelast@mail.com
+
+[alias]
+  #http://haacked.com/archive/2014/07/28/github-flow-aliases/
+  # basics
+  b = branch
+  ba = branch --all
+  co = checkout
+  cob = checkout -b
+  #com = !git checkout master && git upd
+  com = "!f() { git checkout $(git main-local) && git upd; }; f"
+  fch = fetch --prune
+  up = pull --rebase --prune
+  undo = reset HEAD~1 --mixed
+
+  # franes
+  sq = merge --squash
+  bdel = branch -d
+  bfdel = branch -D
+  #upd = !git fch && git merge origin/master
+  upd = "!f() { git fch && git merge $(git main-remote); }; f"
+  sup = !git save && git up && git undo
+  save = !git add -A && git commit -m 'UNDO THISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS'
+  feat = "!f() { git fch && git cob $1 --no-track $(git main-remote); }; f"
+
+  main-remote = rev-parse --abbrev-ref origin/HEAD
+  main-local = "!f() { git main-remote | sed 's@origin/@@' ; }; f"
