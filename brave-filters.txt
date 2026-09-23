@@ -6,4 +6,4 @@ www.instagram.com##div.x1nhvcw1.x1oa3qoh.x1qjc9v5.xqjyukv.xdt5ytf.x2lah0s.x1c4vz
 www.tycsports.com###vanPushPermissionPromptRoot
 
 ! google almacenamiento
-docs.google.com##.javascriptMaterialdesignGm3WizBannerBannerContent
+docs.google.com###docs-file-level-banner
